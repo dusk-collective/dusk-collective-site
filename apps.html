@@ -9,22 +9,22 @@
 
     body {
       font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-      background: #FAFAFA;
-      color: #1a1a1a;
+      background: #0A0A0A;
+      color: #F5F5F5;
       line-height: 1.6;
       -webkit-font-smoothing: antialiased;
     }
 
-    a { color: #2d7d46; text-decoration: none; transition: opacity 0.2s ease; }
-    a:hover { opacity: 0.75; }
+    a { color: #C084FC; text-decoration: none; transition: color 0.2s ease; }
+    a:hover { color: #8B5CF6; }
 
     .nav {
       position: sticky;
       top: 0;
-      background: rgba(250, 250, 250, 0.92);
-      backdrop-filter: blur(12px);
-      -webkit-backdrop-filter: blur(12px);
-      border-bottom: 1px solid rgba(0,0,0,0.06);
+      background: rgba(10, 10, 10, 0.85);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.06);
       z-index: 100;
       padding: 0 32px;
     }
@@ -39,43 +39,63 @@
     .nav-logo {
       font-size: 18px;
       font-weight: 700;
-      color: #1a1a1a;
+      color: #F5F5F5;
       text-decoration: none;
     }
-    .nav-logo:hover { opacity: 1; }
+    .nav-logo:hover { color: #F5F5F5; }
     .nav-links { display: flex; gap: 32px; }
     .nav-links a {
       font-size: 15px;
-      color: #6b6b6b;
+      color: #A0A0A0;
       font-weight: 500;
       transition: color 0.2s ease;
     }
-    .nav-links a:hover { color: #1a1a1a; opacity: 1; }
-    .nav-links a.active { color: #1a1a1a; }
+    .nav-links a:hover { color: #F5F5F5; }
+    .nav-links a.active { color: #F5F5F5; }
 
     .hero {
       max-width: 1080px;
       margin: 0 auto;
-      padding: 120px 32px 60px;
+      padding: 140px 32px 60px;
       text-align: center;
+      position: relative;
+    }
+    .hero::before {
+      content: '';
+      position: absolute;
+      top: -40px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 500px;
+      height: 500px;
+      background: radial-gradient(circle, rgba(139, 92, 246, 0.1) 0%, transparent 70%);
+      pointer-events: none;
     }
     .hero h1 {
       font-size: 48px;
       font-weight: 800;
       letter-spacing: -1.5px;
       line-height: 1.1;
+      color: #F5F5F5;
+      position: relative;
+    }
+    .hero .subtitle {
+      font-size: 18px;
+      color: #A0A0A0;
+      margin-top: 16px;
+      position: relative;
     }
 
     .section {
       max-width: 1080px;
       margin: 0 auto;
-      padding: 0 32px 100px;
+      padding: 0 32px 120px;
     }
 
     .app-detail {
-      background: #fff;
+      background: #141414;
+      border: 1px solid rgba(255, 255, 255, 0.06);
       border-radius: 16px;
-      box-shadow: 0 4px 24px rgba(0,0,0,0.06);
       overflow: hidden;
       max-width: 800px;
       margin: 0 auto;
@@ -83,31 +103,31 @@
     }
     .app-detail:hover {
       transform: translateY(-4px);
-      box-shadow: 0 8px 40px rgba(0,0,0,0.1);
+      box-shadow: 0 8px 40px rgba(139, 92, 246, 0.15);
     }
-    .app-detail-image {
-      width: 100%;
-      height: 360px;
-      object-fit: cover;
+    .app-detail-accent {
+      height: 4px;
+      background: linear-gradient(90deg, #8B5CF6, #3B82F6);
     }
     .app-detail-body {
-      padding: 40px;
+      padding: 44px;
     }
     .app-detail-body h2 {
       font-size: 32px;
       font-weight: 800;
       margin-bottom: 4px;
+      color: #F5F5F5;
     }
     .app-detail-body .tagline {
       font-size: 18px;
-      color: #2d7d46;
+      color: #8B5CF6;
       font-weight: 600;
       margin-bottom: 20px;
     }
     .app-detail-body .description {
       font-size: 16px;
-      color: #6b6b6b;
-      line-height: 1.7;
+      color: #A0A0A0;
+      line-height: 1.8;
       margin-bottom: 28px;
     }
 
@@ -117,9 +137,9 @@
     }
     .features-list li {
       font-size: 15px;
-      color: #1a1a1a;
+      color: #F5F5F5;
       padding: 10px 0;
-      border-bottom: 1px solid rgba(0,0,0,0.05);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.04);
       display: flex;
       align-items: center;
       gap: 12px;
@@ -128,27 +148,29 @@
     .feature-dot {
       width: 8px;
       height: 8px;
-      background: #2d7d46;
+      background: #8B5CF6;
       border-radius: 50%;
       flex-shrink: 0;
     }
 
     .badge {
       display: inline-block;
-      background: #2d7d46;
-      color: #fff;
+      background: rgba(139, 92, 246, 0.15);
+      color: #C084FC;
       font-size: 13px;
       font-weight: 600;
       padding: 8px 16px;
       border-radius: 100px;
       letter-spacing: 0.3px;
+      border: 1px solid rgba(139, 92, 246, 0.25);
     }
     .app-link {
       margin-left: 16px;
       font-size: 14px;
       font-weight: 500;
-      color: #2d7d46;
+      color: #C084FC;
     }
+    .app-link:hover { color: #8B5CF6; }
 
     .coming-soon {
       text-align: center;
@@ -160,16 +182,28 @@
       font-size: 22px;
       font-weight: 700;
       margin-bottom: 12px;
-      color: #1a1a1a;
+      color: #F5F5F5;
     }
     .coming-soon p {
       font-size: 16px;
-      color: #999999;
+      color: #666666;
       line-height: 1.6;
+    }
+    .coming-soon-dots {
+      display: flex;
+      justify-content: center;
+      gap: 8px;
+      margin-top: 24px;
+    }
+    .coming-soon-dots span {
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: rgba(139, 92, 246, 0.4);
     }
 
     .footer {
-      border-top: 1px solid rgba(0,0,0,0.06);
+      border-top: 1px solid rgba(255, 255, 255, 0.06);
       padding: 40px 32px;
       text-align: center;
     }
@@ -179,7 +213,7 @@
     }
     .footer p {
       font-size: 14px;
-      color: #999999;
+      color: #666666;
       margin-bottom: 8px;
     }
     .footer-links {
@@ -190,14 +224,14 @@
     }
     .footer-links a {
       font-size: 14px;
-      color: #6b6b6b;
+      color: #A0A0A0;
     }
+    .footer-links a:hover { color: #C084FC; }
 
     @media (max-width: 640px) {
-      .hero { padding: 80px 24px 40px; }
+      .hero { padding: 100px 24px 40px; }
       .hero h1 { font-size: 36px; letter-spacing: -1px; }
       .section { padding: 0 24px 80px; }
-      .app-detail-image { height: 220px; }
       .app-detail-body { padding: 24px; }
       .app-detail-body h2 { font-size: 26px; }
       .nav { padding: 0 20px; }
@@ -221,16 +255,17 @@
 
   <main>
     <section class="hero">
-      <h1>Our Apps</h1>
+      <h1>What We're Building</h1>
+      <p class="subtitle">AI-powered tools for everyday life.</p>
     </section>
 
     <section class="section">
       <div class="app-detail">
-        <img src="https://images.pexels.com/photos/1640777/pexels-photo-1640777.jpeg" alt="Spence — AI Kitchen Assistant" class="app-detail-image">
+        <div class="app-detail-accent"></div>
         <div class="app-detail-body">
           <h2>Spence</h2>
-          <p class="tagline">Dinner's Figured Out.</p>
-          <p class="description">Spence is your AI-powered kitchen assistant. It tracks what's in your pantry, generates personalized recipes based on what you already have, helps you plan meals for the week, and builds smart grocery lists that fill in the gaps. No more staring into the fridge wondering what to make. No more food going to waste. Spence handles the thinking so you can just cook.</p>
+          <p class="tagline">Your AI Kitchen Assistant.</p>
+          <p class="description">Tell Spence what's in your kitchen and it creates recipes from what you already have. Prioritizes ingredients about to expire. Generates grocery lists with only what's missing. Coming soon to the App Store.</p>
           <ul class="features-list">
             <li><span class="feature-dot"></span>Pantry tracking with smart expiration alerts</li>
             <li><span class="feature-dot"></span>AI-generated recipes from your ingredients</li>
@@ -244,8 +279,11 @@
       </div>
 
       <div class="coming-soon">
-        <h3>More on the way.</h3>
+        <h3>More products in development.</h3>
         <p>We're building a portfolio of AI-powered tools — each one designed to solve a real problem. Stay tuned.</p>
+        <div class="coming-soon-dots">
+          <span></span><span></span><span></span>
+        </div>
       </div>
     </section>
   </main>

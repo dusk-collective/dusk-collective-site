@@ -9,22 +9,22 @@
 
     body {
       font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-      background: #FAFAFA;
-      color: #1a1a1a;
+      background: #0A0A0A;
+      color: #F5F5F5;
       line-height: 1.6;
       -webkit-font-smoothing: antialiased;
     }
 
-    a { color: #2d7d46; text-decoration: none; transition: opacity 0.2s ease; }
-    a:hover { opacity: 0.75; }
+    a { color: #C084FC; text-decoration: none; transition: color 0.2s ease; }
+    a:hover { color: #8B5CF6; }
 
     .nav {
       position: sticky;
       top: 0;
-      background: rgba(250, 250, 250, 0.92);
-      backdrop-filter: blur(12px);
-      -webkit-backdrop-filter: blur(12px);
-      border-bottom: 1px solid rgba(0,0,0,0.06);
+      background: rgba(10, 10, 10, 0.85);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.06);
       z-index: 100;
       padding: 0 32px;
     }
@@ -39,31 +39,45 @@
     .nav-logo {
       font-size: 18px;
       font-weight: 700;
-      color: #1a1a1a;
+      color: #F5F5F5;
       text-decoration: none;
     }
-    .nav-logo:hover { opacity: 1; }
+    .nav-logo:hover { color: #F5F5F5; }
     .nav-links { display: flex; gap: 32px; }
     .nav-links a {
       font-size: 15px;
-      color: #6b6b6b;
+      color: #A0A0A0;
       font-weight: 500;
       transition: color 0.2s ease;
     }
-    .nav-links a:hover { color: #1a1a1a; opacity: 1; }
-    .nav-links a.active { color: #1a1a1a; }
+    .nav-links a:hover { color: #F5F5F5; }
+    .nav-links a.active { color: #F5F5F5; }
 
     .hero {
       max-width: 1080px;
       margin: 0 auto;
-      padding: 120px 32px 60px;
+      padding: 140px 32px 60px;
       text-align: center;
+      position: relative;
+    }
+    .hero::before {
+      content: '';
+      position: absolute;
+      top: -40px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 500px;
+      height: 500px;
+      background: radial-gradient(circle, rgba(139, 92, 246, 0.1) 0%, transparent 70%);
+      pointer-events: none;
     }
     .hero h1 {
       font-size: 48px;
       font-weight: 800;
       letter-spacing: -1.5px;
       line-height: 1.1;
+      color: #F5F5F5;
+      position: relative;
     }
 
     .story {
@@ -73,22 +87,41 @@
     }
     .story p {
       font-size: 17px;
-      color: #6b6b6b;
-      line-height: 1.75;
+      color: #A0A0A0;
+      line-height: 1.8;
       margin-bottom: 20px;
+    }
+
+    .founder {
+      max-width: 680px;
+      margin: 0 auto;
+      padding: 0 32px 80px;
+    }
+    .founder-label {
+      font-size: 13px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      color: #666666;
+      margin-bottom: 16px;
+    }
+    .founder p {
+      font-size: 17px;
+      color: #A0A0A0;
+      line-height: 1.8;
     }
 
     .values {
       max-width: 1080px;
       margin: 0 auto;
-      padding: 0 32px 100px;
+      padding: 0 32px 120px;
     }
     .values-label {
       font-size: 13px;
       font-weight: 600;
       text-transform: uppercase;
       letter-spacing: 1.5px;
-      color: #999999;
+      color: #666666;
       margin-bottom: 32px;
       text-align: center;
     }
@@ -98,29 +131,30 @@
       gap: 24px;
     }
     .value-card {
-      background: #fff;
+      background: #141414;
+      border: 1px solid rgba(255, 255, 255, 0.06);
       border-radius: 16px;
-      box-shadow: 0 4px 24px rgba(0,0,0,0.06);
       padding: 32px;
       transition: transform 0.3s ease, box-shadow 0.3s ease;
     }
     .value-card:hover {
       transform: translateY(-4px);
-      box-shadow: 0 8px 40px rgba(0,0,0,0.1);
+      box-shadow: 0 8px 40px rgba(139, 92, 246, 0.12);
     }
     .value-card h3 {
       font-size: 18px;
       font-weight: 700;
       margin-bottom: 10px;
+      color: #F5F5F5;
     }
     .value-card p {
       font-size: 15px;
-      color: #6b6b6b;
+      color: #A0A0A0;
       line-height: 1.6;
     }
 
     .footer {
-      border-top: 1px solid rgba(0,0,0,0.06);
+      border-top: 1px solid rgba(255, 255, 255, 0.06);
       padding: 40px 32px;
       text-align: center;
     }
@@ -130,7 +164,7 @@
     }
     .footer p {
       font-size: 14px;
-      color: #999999;
+      color: #666666;
       margin-bottom: 8px;
     }
     .footer-links {
@@ -141,13 +175,15 @@
     }
     .footer-links a {
       font-size: 14px;
-      color: #6b6b6b;
+      color: #A0A0A0;
     }
+    .footer-links a:hover { color: #C084FC; }
 
     @media (max-width: 640px) {
-      .hero { padding: 80px 24px 40px; }
+      .hero { padding: 100px 24px 40px; }
       .hero h1 { font-size: 36px; letter-spacing: -1px; }
       .story { padding: 32px 24px 60px; }
+      .founder { padding: 0 24px 60px; }
       .values { padding: 0 24px 80px; }
       .values-grid { grid-template-columns: 1fr; }
       .nav { padding: 0 20px; }
@@ -171,13 +207,17 @@
 
   <main>
     <section class="hero">
-      <h1>About Dusk Collective</h1>
+      <h1>The Vision</h1>
     </section>
 
     <section class="story">
-      <p>Dusk Collective was founded by Daniel Chambers with a simple belief: the best technology disappears into your life. It doesn't demand attention — it removes friction, solves problems, and gives you back time for the things that actually matter.</p>
-      <p>By day, Daniel runs a full-service convention hotel in downtown Indianapolis. By night, he builds AI-powered products that tackle everyday problems most people have just learned to live with. What starts in the kitchen doesn't end there — Dusk Collective is a growing portfolio of micro-ventures, each one designed to make a specific part of life a little easier.</p>
-      <p>Every product starts the same way: a real frustration, a clear solution, and AI that does the heavy lifting behind a beautifully simple interface. No bloat. No feature creep. Just tools that work the way you think.</p>
+      <p>Dusk Collective was founded on a simple idea: the best technology disappears into your life. It doesn't ask you to learn something new — it just works.</p>
+      <p>We build AI-powered apps that solve real problems real people face every day. No enterprise software. No complex dashboards. Just tools that make life easier.</p>
+    </section>
+
+    <section class="founder">
+      <p class="founder-label">Founded by Daniel Chambers</p>
+      <p>Building at the intersection of hospitality and technology. By day, running a full-service convention hotel in downtown Indianapolis. By night, creating AI-powered products that tackle everyday problems most people have just learned to live with. What starts as a personal frustration becomes a product — and Dusk Collective is the home for all of them.</p>
     </section>
 
     <section class="values">
@@ -188,11 +228,11 @@
           <p>We don't use AI because it's trendy. Every model, every prompt, every integration exists to solve a specific problem better than any alternative.</p>
         </div>
         <div class="value-card">
-          <h3>Design that Delights</h3>
+          <h3>Design Obsessed</h3>
           <p>Great software should feel obvious. We obsess over the details — clean layouts, smooth interactions, and interfaces that respect your time and attention.</p>
         </div>
         <div class="value-card">
-          <h3>Ship Fast, Iterate Faster</h3>
+          <h3>Ship and Iterate</h3>
           <p>Perfect is the enemy of useful. We ship real products to real people, listen to feedback, and improve relentlessly. Every week is better than the last.</p>
         </div>
       </div>
