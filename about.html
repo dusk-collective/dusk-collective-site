@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>About — Dusk Collective</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      background: #FAFAFA;
+      color: #1a1a1a;
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    a { color: #2d7d46; text-decoration: none; transition: opacity 0.2s ease; }
+    a:hover { opacity: 0.75; }
+
+    .nav {
+      position: sticky;
+      top: 0;
+      background: rgba(250, 250, 250, 0.92);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border-bottom: 1px solid rgba(0,0,0,0.06);
+      z-index: 100;
+      padding: 0 32px;
+    }
+    .nav-inner {
+      max-width: 1080px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      height: 64px;
+    }
+    .nav-logo {
+      font-size: 18px;
+      font-weight: 700;
+      color: #1a1a1a;
+      text-decoration: none;
+    }
+    .nav-logo:hover { opacity: 1; }
+    .nav-links { display: flex; gap: 32px; }
+    .nav-links a {
+      font-size: 15px;
+      color: #6b6b6b;
+      font-weight: 500;
+      transition: color 0.2s ease;
+    }
+    .nav-links a:hover { color: #1a1a1a; opacity: 1; }
+    .nav-links a.active { color: #1a1a1a; }
+
+    .hero {
+      max-width: 1080px;
+      margin: 0 auto;
+      padding: 120px 32px 60px;
+      text-align: center;
+    }
+    .hero h1 {
+      font-size: 48px;
+      font-weight: 800;
+      letter-spacing: -1.5px;
+      line-height: 1.1;
+    }
+
+    .story {
+      max-width: 680px;
+      margin: 0 auto;
+      padding: 40px 32px 80px;
+    }
+    .story p {
+      font-size: 17px;
+      color: #6b6b6b;
+      line-height: 1.75;
+      margin-bottom: 20px;
+    }
+
+    .values {
+      max-width: 1080px;
+      margin: 0 auto;
+      padding: 0 32px 100px;
+    }
+    .values-label {
+      font-size: 13px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      color: #999999;
+      margin-bottom: 32px;
+      text-align: center;
+    }
+    .values-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+    }
+    .value-card {
+      background: #fff;
+      border-radius: 16px;
+      box-shadow: 0 4px 24px rgba(0,0,0,0.06);
+      padding: 32px;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .value-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 8px 40px rgba(0,0,0,0.1);
+    }
+    .value-card h3 {
+      font-size: 18px;
+      font-weight: 700;
+      margin-bottom: 10px;
+    }
+    .value-card p {
+      font-size: 15px;
+      color: #6b6b6b;
+      line-height: 1.6;
+    }
+
+    .footer {
+      border-top: 1px solid rgba(0,0,0,0.06);
+      padding: 40px 32px;
+      text-align: center;
+    }
+    .footer-inner {
+      max-width: 1080px;
+      margin: 0 auto;
+    }
+    .footer p {
+      font-size: 14px;
+      color: #999999;
+      margin-bottom: 8px;
+    }
+    .footer-links {
+      display: flex;
+      justify-content: center;
+      gap: 24px;
+      margin-top: 12px;
+    }
+    .footer-links a {
+      font-size: 14px;
+      color: #6b6b6b;
+    }
+
+    @media (max-width: 640px) {
+      .hero { padding: 80px 24px 40px; }
+      .hero h1 { font-size: 36px; letter-spacing: -1px; }
+      .story { padding: 32px 24px 60px; }
+      .values { padding: 0 24px 80px; }
+      .values-grid { grid-template-columns: 1fr; }
+      .nav { padding: 0 20px; }
+      .nav-links { gap: 20px; }
+      .nav-links a { font-size: 14px; }
+    }
+  </style>
+</head>
+<body>
+
+  <header class="nav">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo">Dusk Collective</a>
+      <nav class="nav-links">
+        <a href="about.html" class="active">About</a>
+        <a href="apps.html">Apps</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <h1>About Dusk Collective</h1>
+    </section>
+
+    <section class="story">
+      <p>Dusk Collective was founded by Daniel Chambers with a simple belief: the best technology disappears into your life. It doesn't demand attention — it removes friction, solves problems, and gives you back time for the things that actually matter.</p>
+      <p>By day, Daniel runs a full-service convention hotel in downtown Indianapolis. By night, he builds AI-powered products that tackle everyday problems most people have just learned to live with. What starts in the kitchen doesn't end there — Dusk Collective is a growing portfolio of micro-ventures, each one designed to make a specific part of life a little easier.</p>
+      <p>Every product starts the same way: a real frustration, a clear solution, and AI that does the heavy lifting behind a beautifully simple interface. No bloat. No feature creep. Just tools that work the way you think.</p>
+    </section>
+
+    <section class="values">
+      <p class="values-label">What We Believe</p>
+      <div class="values-grid">
+        <div class="value-card">
+          <h3>AI with Purpose</h3>
+          <p>We don't use AI because it's trendy. Every model, every prompt, every integration exists to solve a specific problem better than any alternative.</p>
+        </div>
+        <div class="value-card">
+          <h3>Design that Delights</h3>
+          <p>Great software should feel obvious. We obsess over the details — clean layouts, smooth interactions, and interfaces that respect your time and attention.</p>
+        </div>
+        <div class="value-card">
+          <h3>Ship Fast, Iterate Faster</h3>
+          <p>Perfect is the enemy of useful. We ship real products to real people, listen to feedback, and improve relentlessly. Every week is better than the last.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+      <p>&copy; 2026 Dusk Collective LLC</p>
+      <div class="footer-links">
+        <a href="mailto:daniel@duskcollective.co">Email</a>
+        <a href="https://tiktok.com/@spence.kitchen" target="_blank" rel="noopener">TikTok</a>
+        <a href="https://instagram.com/spence.kitchen" target="_blank" rel="noopener">Instagram</a>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>

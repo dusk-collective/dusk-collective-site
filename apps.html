@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Apps — Dusk Collective</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      background: #FAFAFA;
+      color: #1a1a1a;
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    a { color: #2d7d46; text-decoration: none; transition: opacity 0.2s ease; }
+    a:hover { opacity: 0.75; }
+
+    .nav {
+      position: sticky;
+      top: 0;
+      background: rgba(250, 250, 250, 0.92);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border-bottom: 1px solid rgba(0,0,0,0.06);
+      z-index: 100;
+      padding: 0 32px;
+    }
+    .nav-inner {
+      max-width: 1080px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      height: 64px;
+    }
+    .nav-logo {
+      font-size: 18px;
+      font-weight: 700;
+      color: #1a1a1a;
+      text-decoration: none;
+    }
+    .nav-logo:hover { opacity: 1; }
+    .nav-links { display: flex; gap: 32px; }
+    .nav-links a {
+      font-size: 15px;
+      color: #6b6b6b;
+      font-weight: 500;
+      transition: color 0.2s ease;
+    }
+    .nav-links a:hover { color: #1a1a1a; opacity: 1; }
+    .nav-links a.active { color: #1a1a1a; }
+
+    .hero {
+      max-width: 1080px;
+      margin: 0 auto;
+      padding: 120px 32px 60px;
+      text-align: center;
+    }
+    .hero h1 {
+      font-size: 48px;
+      font-weight: 800;
+      letter-spacing: -1.5px;
+      line-height: 1.1;
+    }
+
+    .section {
+      max-width: 1080px;
+      margin: 0 auto;
+      padding: 0 32px 100px;
+    }
+
+    .app-detail {
+      background: #fff;
+      border-radius: 16px;
+      box-shadow: 0 4px 24px rgba(0,0,0,0.06);
+      overflow: hidden;
+      max-width: 800px;
+      margin: 0 auto;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .app-detail:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 8px 40px rgba(0,0,0,0.1);
+    }
+    .app-detail-image {
+      width: 100%;
+      height: 360px;
+      object-fit: cover;
+    }
+    .app-detail-body {
+      padding: 40px;
+    }
+    .app-detail-body h2 {
+      font-size: 32px;
+      font-weight: 800;
+      margin-bottom: 4px;
+    }
+    .app-detail-body .tagline {
+      font-size: 18px;
+      color: #2d7d46;
+      font-weight: 600;
+      margin-bottom: 20px;
+    }
+    .app-detail-body .description {
+      font-size: 16px;
+      color: #6b6b6b;
+      line-height: 1.7;
+      margin-bottom: 28px;
+    }
+
+    .features-list {
+      list-style: none;
+      margin-bottom: 32px;
+    }
+    .features-list li {
+      font-size: 15px;
+      color: #1a1a1a;
+      padding: 10px 0;
+      border-bottom: 1px solid rgba(0,0,0,0.05);
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+    .features-list li:last-child { border-bottom: none; }
+    .feature-dot {
+      width: 8px;
+      height: 8px;
+      background: #2d7d46;
+      border-radius: 50%;
+      flex-shrink: 0;
+    }
+
+    .badge {
+      display: inline-block;
+      background: #2d7d46;
+      color: #fff;
+      font-size: 13px;
+      font-weight: 600;
+      padding: 8px 16px;
+      border-radius: 100px;
+      letter-spacing: 0.3px;
+    }
+    .app-link {
+      margin-left: 16px;
+      font-size: 14px;
+      font-weight: 500;
+      color: #2d7d46;
+    }
+
+    .coming-soon {
+      text-align: center;
+      padding: 80px 32px;
+      max-width: 480px;
+      margin: 0 auto;
+    }
+    .coming-soon h3 {
+      font-size: 22px;
+      font-weight: 700;
+      margin-bottom: 12px;
+      color: #1a1a1a;
+    }
+    .coming-soon p {
+      font-size: 16px;
+      color: #999999;
+      line-height: 1.6;
+    }
+
+    .footer {
+      border-top: 1px solid rgba(0,0,0,0.06);
+      padding: 40px 32px;
+      text-align: center;
+    }
+    .footer-inner {
+      max-width: 1080px;
+      margin: 0 auto;
+    }
+    .footer p {
+      font-size: 14px;
+      color: #999999;
+      margin-bottom: 8px;
+    }
+    .footer-links {
+      display: flex;
+      justify-content: center;
+      gap: 24px;
+      margin-top: 12px;
+    }
+    .footer-links a {
+      font-size: 14px;
+      color: #6b6b6b;
+    }
+
+    @media (max-width: 640px) {
+      .hero { padding: 80px 24px 40px; }
+      .hero h1 { font-size: 36px; letter-spacing: -1px; }
+      .section { padding: 0 24px 80px; }
+      .app-detail-image { height: 220px; }
+      .app-detail-body { padding: 24px; }
+      .app-detail-body h2 { font-size: 26px; }
+      .nav { padding: 0 20px; }
+      .nav-links { gap: 20px; }
+      .nav-links a { font-size: 14px; }
+    }
+  </style>
+</head>
+<body>
+
+  <header class="nav">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo">Dusk Collective</a>
+      <nav class="nav-links">
+        <a href="about.html">About</a>
+        <a href="apps.html" class="active">Apps</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <h1>Our Apps</h1>
+    </section>
+
+    <section class="section">
+      <div class="app-detail">
+        <img src="https://images.pexels.com/photos/1640777/pexels-photo-1640777.jpeg" alt="Spence — AI Kitchen Assistant" class="app-detail-image">
+        <div class="app-detail-body">
+          <h2>Spence</h2>
+          <p class="tagline">Dinner's Figured Out.</p>
+          <p class="description">Spence is your AI-powered kitchen assistant. It tracks what's in your pantry, generates personalized recipes based on what you already have, helps you plan meals for the week, and builds smart grocery lists that fill in the gaps. No more staring into the fridge wondering what to make. No more food going to waste. Spence handles the thinking so you can just cook.</p>
+          <ul class="features-list">
+            <li><span class="feature-dot"></span>Pantry tracking with smart expiration alerts</li>
+            <li><span class="feature-dot"></span>AI-generated recipes from your ingredients</li>
+            <li><span class="feature-dot"></span>Weekly meal planning</li>
+            <li><span class="feature-dot"></span>Intelligent grocery list generation</li>
+            <li><span class="feature-dot"></span>Food waste prevention at its core</li>
+          </ul>
+          <span class="badge">Coming Soon to the App Store</span>
+          <a href="https://spence.kitchen" class="app-link" target="_blank" rel="noopener">spence.kitchen &rarr;</a>
+        </div>
+      </div>
+
+      <div class="coming-soon">
+        <h3>More on the way.</h3>
+        <p>We're building a portfolio of AI-powered tools — each one designed to solve a real problem. Stay tuned.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+      <p>&copy; 2026 Dusk Collective LLC</p>
+      <div class="footer-links">
+        <a href="mailto:daniel@duskcollective.co">Email</a>
+        <a href="https://tiktok.com/@spence.kitchen" target="_blank" rel="noopener">TikTok</a>
+        <a href="https://instagram.com/spence.kitchen" target="_blank" rel="noopener">Instagram</a>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
