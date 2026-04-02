@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Terms of Service — Dusk Collective</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      background: #0A0A0A;
+      color: #F5F5F5;
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    a { color: #C084FC; text-decoration: none; transition: color 0.2s ease; }
+    a:hover { color: #8B5CF6; }
+
+    .nav {
+      position: sticky;
+      top: 0;
+      background: rgba(10, 10, 10, 0.85);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+      z-index: 100;
+      padding: 0 32px;
+    }
+    .nav-inner {
+      max-width: 1080px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      height: 64px;
+    }
+    .nav-logo {
+      font-size: 18px;
+      font-weight: 700;
+      color: #F5F5F5;
+      text-decoration: none;
+    }
+    .nav-logo:hover { color: #F5F5F5; }
+    .nav-links { display: flex; gap: 32px; }
+    .nav-links a {
+      font-size: 15px;
+      color: #A0A0A0;
+      font-weight: 500;
+      transition: color 0.2s ease;
+    }
+    .nav-links a:hover { color: #F5F5F5; }
+    .nav-links a.active { color: #F5F5F5; }
+
+    .hero {
+      max-width: 1080px;
+      margin: 0 auto;
+      padding: 140px 32px 40px;
+      text-align: center;
+      position: relative;
+    }
+    .hero::before {
+      content: '';
+      position: absolute;
+      top: -40px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 500px;
+      height: 500px;
+      background: radial-gradient(circle, rgba(139, 92, 246, 0.1) 0%, transparent 70%);
+      pointer-events: none;
+    }
+    .hero h1 {
+      font-size: 48px;
+      font-weight: 800;
+      letter-spacing: -1.5px;
+      line-height: 1.1;
+      color: #F5F5F5;
+      position: relative;
+    }
+    .hero .effective-date {
+      font-size: 15px;
+      color: #666666;
+      margin-top: 16px;
+      position: relative;
+    }
+
+    .legal {
+      max-width: 680px;
+      margin: 0 auto;
+      padding: 40px 32px 80px;
+    }
+    .legal h2 {
+      font-size: 24px;
+      font-weight: 700;
+      color: #F5F5F5;
+      margin-top: 48px;
+      margin-bottom: 16px;
+    }
+    .legal h2:first-child {
+      margin-top: 0;
+    }
+    .legal h3 {
+      font-size: 18px;
+      font-weight: 600;
+      color: #F5F5F5;
+      margin-top: 24px;
+      margin-bottom: 10px;
+    }
+    .legal p {
+      font-size: 17px;
+      color: #A0A0A0;
+      line-height: 1.8;
+      margin-bottom: 16px;
+    }
+    .legal ul {
+      list-style: none;
+      padding-left: 0;
+      margin-bottom: 16px;
+    }
+    .legal ul li {
+      font-size: 17px;
+      color: #A0A0A0;
+      line-height: 1.8;
+      padding-left: 20px;
+      position: relative;
+    }
+    .legal ul li::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 12px;
+      width: 6px;
+      height: 6px;
+      background: #C084FC;
+      border-radius: 50%;
+    }
+
+    .footer {
+      border-top: 1px solid rgba(255, 255, 255, 0.06);
+      padding: 40px 32px;
+      text-align: center;
+    }
+    .footer-inner {
+      max-width: 1080px;
+      margin: 0 auto;
+    }
+    .footer p {
+      font-size: 14px;
+      color: #666666;
+      margin-bottom: 8px;
+    }
+    .footer-links {
+      display: flex;
+      justify-content: center;
+      gap: 24px;
+      margin-top: 12px;
+    }
+    .footer-links a {
+      font-size: 14px;
+      color: #A0A0A0;
+    }
+    .footer-links a:hover { color: #C084FC; }
+
+    @media (max-width: 640px) {
+      .hero { padding: 100px 24px 32px; }
+      .hero h1 { font-size: 36px; letter-spacing: -1px; }
+      .legal { padding: 32px 24px 60px; }
+      .nav { padding: 0 20px; }
+      .nav-links { gap: 20px; }
+      .nav-links a { font-size: 14px; }
+    }
+  </style>
+</head>
+<body>
+
+  <header class="nav">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo">Dusk Collective</a>
+      <nav class="nav-links">
+        <a href="about.html">About</a>
+        <a href="apps.html">Apps</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <h1>Terms of Service</h1>
+      <p class="effective-date">Effective April 2, 2026</p>
+    </section>
+
+    <section class="legal">
+      <p>These Terms of Service ("Terms") govern your use of the Spence app ("Spence" or "the app") operated by Dusk Collective LLC ("we," "us," or "our"). Please read them carefully.</p>
+
+      <h2>1. Acceptance of Terms</h2>
+      <p>By downloading, installing, or using Spence, you agree to be bound by these Terms. If you do not agree, do not use the app.</p>
+
+      <h2>2. Description of Service</h2>
+      <p>Spence is an AI-powered kitchen assistant that helps you manage your pantry, generate recipes based on what you have on hand, plan meals, and create grocery lists. The app uses artificial intelligence to provide personalized recipe suggestions tailored to your ingredients, dietary preferences, and household needs.</p>
+
+      <h2>3. Subscriptions & Billing</h2>
+      <ul>
+        <li>Spence offers a <strong>7-day free trial</strong> with the annual plan</li>
+        <li>Subscription plans: <strong>$8.99/month</strong> or <strong>$49.99/year</strong></li>
+        <li>All billing is processed through the <strong>Apple App Store</strong></li>
+        <li>Subscriptions <strong>auto-renew</strong> unless cancelled at least 24 hours before the end of the current billing period</li>
+        <li>You can cancel anytime in <strong>Settings &gt; Apple ID &gt; Subscriptions</strong> on your device</li>
+      </ul>
+      <p>No refunds are provided for partial billing periods. Free trial eligibility is determined by Apple and may be limited to one trial per Apple ID.</p>
+
+      <h2>4. User Responsibilities</h2>
+      <ul>
+        <li><strong>Pantry accuracy is on you.</strong> You are responsible for the accuracy of the ingredients, quantities, and expiration dates you enter into the app.</li>
+        <li><strong>Recipes are suggestions, not medical advice.</strong> AI-generated recipes are not a substitute for professional dietary, nutritional, or medical advice.</li>
+        <li><strong>Check for allergens.</strong> While Spence flags allergies during recipe generation, AI is not infallible. Always verify ingredients if you or someone in your household has food allergies or sensitivities.</li>
+        <li><strong>Age requirement.</strong> You must be 13 years of age or older to use Spence.</li>
+      </ul>
+
+      <h2>5. Intellectual Property</h2>
+      <p>Spence, including its design, code, branding, and underlying technology, is owned by Dusk Collective LLC. All rights reserved.</p>
+      <p>Recipes generated by the app are provided for your personal, non-commercial use. You are free to cook, share, and enjoy them — but you may not redistribute them commercially as your own product.</p>
+
+      <h2>6. Disclaimers</h2>
+      <p>Spence is provided <strong>"as is"</strong> and <strong>"as available"</strong> without warranties of any kind, whether express or implied, including but not limited to implied warranties of merchantability, fitness for a particular purpose, or non-infringement.</p>
+      <p>Specifically:</p>
+      <ul>
+        <li>We are <strong>not liable</strong> for food safety issues, allergic reactions, or adverse dietary outcomes resulting from recipes generated by the app</li>
+        <li>AI-generated recipes are <strong>suggestions</strong> — always use your own judgment when preparing food</li>
+        <li>We are <strong>not responsible</strong> for expired food, food waste, or any decisions you make based on app data</li>
+      </ul>
+
+      <h2>7. Limitation of Liability</h2>
+      <p>To the maximum extent permitted by applicable law, Dusk Collective LLC's total liability to you for any claims arising from or related to your use of Spence shall not exceed the total amount you paid to us in the <strong>12 months preceding the claim</strong>.</p>
+      <p>In no event shall we be liable for any indirect, incidental, special, consequential, or punitive damages.</p>
+
+      <h2>8. Governing Law</h2>
+      <p>These Terms are governed by and construed in accordance with the laws of the <strong>State of Texas</strong>, without regard to its conflict of law provisions.</p>
+
+      <h2>9. Changes to These Terms</h2>
+      <p>We may update these Terms from time to time. When we do, we will post the revised Terms on this page and update the effective date. Your continued use of Spence after changes are posted constitutes your acceptance of the updated Terms.</p>
+
+      <h2>10. Contact Us</h2>
+      <p>If you have questions about these Terms, reach out to us at <a href="mailto:daniel@duskcollective.co">daniel@duskcollective.co</a>.</p>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+      <p>&copy; 2026 Dusk Collective LLC</p>
+      <div class="footer-links">
+        <a href="privacy.html">Privacy</a>
+        <a href="terms.html">Terms</a>
+        <a href="mailto:daniel@duskcollective.co">Email</a>
+        <a href="https://tiktok.com/@spence.kitchen" target="_blank" rel="noopener">TikTok</a>
+        <a href="https://instagram.com/spence.kitchen" target="_blank" rel="noopener">Instagram</a>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
